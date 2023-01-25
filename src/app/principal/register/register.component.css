@@ -1,0 +1,22 @@
+div{
+    border-top: 15px solid rgb(1, 116, 20);
+  border-right: 15px solid rgb(1, 116, 20);
+  border-bottom: 15px solid rgb(1, 116, 20);
+  border-left: 15px solid rgb(1, 116, 20);
+}
+
+#respuesta{
+    color: rgb(0, 197, 49);
+}
+
+#botones1{
+    color: beige;
+}
+
+#botones2{
+    color: beige;
+}
+
+#titulo{
+    color: rgb(48, 158, 20);
+}

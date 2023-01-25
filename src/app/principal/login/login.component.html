@@ -1,0 +1,31 @@
+<section class="container py-5 h-100">
+  <section class="row d-flex justify-content-center align-items-center h-100">
+    <section class="col-12 col-md-8 col-lg-6 col-xl-5">
+      <section class="card shadow-2-strong" style="border-radius: 1rem">
+        <div class="card-body p-5 text-center">
+          <h3 class="mb-5" id="titulo">Inicio Sesion</h3>
+
+          <!--************ INPUT USUARIO ************-->
+          <section class="form-outline mb-4">
+            <input class="form-control form-control-lg" placeholder="User" type="text" id="usuario" [(ngModel)]="usuario" [style]="usuarioError!=''?'border-color: red':''" />
+            <p class="text-danger" *ngIf="usuarioError!=''">{{usuarioError}}</p>
+          </section>
+        
+          <!--************ INPUT CONTRA ************-->
+          <section class="form-outline mb-4">
+            <input class="form-control form-control-lg" placeholder="Password" type="password" id="contra"[(ngModel)]="contra" [style]="contraError!=''?'border-color: red':''" />
+            <p class="text-danger" *ngIf="contraError!=''">{{contraError}}</p>
+          </section>
+            
+          <!--************ BUTTON ************-->
+          <section class="pt-1 mb-4">
+            <input class="btn btn-success w-100 btn-lg" type="button" value="Login"
+              (click)="login()" />
+          </section>
+          <h3 class="alert text text-danger" *ngIf="errorMensaje!=''">{{errorMensaje}}</h3>
+        </div>
+      </section>
+    </section>
+  </section>
+</section>
+

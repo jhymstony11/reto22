@@ -1,0 +1,75 @@
+<section class="container vh-100">
+  <section class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <section class="container h-90">
+      <section class="row d-flex justify-content-center align-items-center h-70">
+        <section class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <section class="card" style="border-radius: 15px;">
+            <div class="card-body p-5 bg-light" style="border-radius: 15px;">
+              <h2 class="text-uppercase text-center mb-5" id="titulo">Registro</h2>
+              <form [formGroup]="registroForm" (ngSubmit)="Enviar()">
+
+                <section class="row">
+
+                  <section class="col form-outline mb-4">
+                    <label class="form-label" for="firstname">First Name</label>
+                    <input type="text" class="form-control form-control-lg" formControlName="firstname" placeholder="First Name"/>
+                  <section *ngIf="firstname?.invalid && (firstname?.dirty || firstname?.touched)">
+                      <section *ngIf="firstname?.errors?.['required']" class="alert alert-danger">
+                        Es requerido llenar el nombre
+                      </section>
+                    </section>
+                  </section>
+  
+                  <section class="col form-outline mb-4">
+                    <label class="form-label" for="lastname">Last Name</label>
+                    <input type="text" class="form-control form-control-lg" formControlName="lastname" placeholder="Last Name"/>
+                    <section *ngIf="lastname?.invalid && (lastname?.dirty || lastname?.touched)">
+                      <section *ngIf="lastname?.errors?.['required']" class="alert alert-danger">
+                        Es requerido llenar el apellido
+                      </section>
+                    </section>
+                  </section>
+
+                </section>
+
+                <section class="row">
+
+                  <section class="col form-outline mb-4">
+                    <label class="form-label" for="username">Username</label>
+                    <input type="text" class="form-control form-control-lg" formControlName="username" placeholder="Username"/>
+                    <section *ngIf="username?.invalid && (username?.dirty || username?.touched)">
+                      <section *ngIf="username?.errors?.['required']" class="alert alert-danger">
+                        Es requerido llenar el usuario
+                      </section>
+                    </section>
+                  </section>
+  
+                  <section class="col form-outline mb-4">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" class="form-control form-control-lg" formControlName="password" placeholder="Password" />
+                    <section *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+                      <section *ngIf="password?.errors?.['required']" class="alert alert-danger">
+                        Es requerido llenar la constraseña
+                      </section>
+                    </section>
+                  </section>
+
+                </section>
+
+
+
+                
+
+                <section class="form-group text-center m-3">
+                  <input id="botones1" type="submit" value="Registrar" class="btn btn-info rounded-pill btn-lg col-4" [disabled]="registroForm.invalid">
+                  <input id="botones2" type="button" value="Refrescar" class="btn btn-warning rounded-pill btn-lg m-3 col-4" (click)="Refrescar()">
+                </section>
+              </form>
+                <h3 *ngIf="menj" id="respuesta">Registro completado exitosamente ✅</h3>
+            </div>
+          </section>
+        </section>
+      </section>
+    </section>
+  </section>
+</section>

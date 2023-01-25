@@ -1,1 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    background-image: url("../.././reto22-angular/src/assets/f.elconfidencial.com_original_4e7_001_917_4e70019171f010d95b7914c9bdd2c20a.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+}
